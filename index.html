@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6e7e2">
+<meta name="description" content="My Wellness — Self-Care — a private, offline-first wellness companion.">
+<title>My Wellness &amp; Self-Care</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="My Wellness">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" class="app-frame">
+  <div id="scrim" class="scrim" hidden></div>
+  <aside id="drawer" class="drawer" aria-label="Main menu" hidden>
+    <div class="drawer-head" id="drawerHead"></div>
+    <nav class="drawer-nav" id="drawerNav"></nav>
+    <div class="drawer-foot">Made with care 🌸</div>
+  </aside>
+
+  <header id="topbar" class="topbar" hidden>
+    <button id="btnMenu" class="icon-btn" aria-label="Open menu">☰</button>
+    <div class="topbar-title" id="topbarTitle">Home</div>
+    <button id="btnAvatar" class="avatar-btn" aria-label="Open profile"><span id="avatarMini">🌸</span></button>
+  </header>
+
+  <main id="view" class="view" tabindex="-1"></main>
+
+  <nav id="bottomnav" class="bottomnav" aria-label="Quick navigation" hidden></nav>
+
+  <div id="bannerStack" class="banner-stack"></div>
+  <div id="toast" class="toast" hidden></div>
+  <div id="modalRoot"></div>
+  <div id="printRoot" class="print-only"></div>
+</div>
+
+<div id="lockScreen" class="lock-screen" hidden>
+  <div class="lock-card">
+    <div class="lock-flower">🌸</div>
+    <h2 id="lockTitle">Welcome back</h2>
+    <p class="muted">Enter your PIN to open your private space.</p>
+    <div class="pin-dots" id="pinDots"><span></span><span></span><span></span><span></span></div>
+    <div class="pin-pad" id="pinPad"></div>
+    <button id="lockReset" class="link-btn danger">Forgot PIN? Reset app data</button>
+  </div>
+</div>
+
+<div id="onboardRoot"></div>
+
+<noscript><div class="noscript">My Wellness &amp; Self-Care needs JavaScript to run. Please enable it.</div></noscript>
+<script type="module" src="app.js"></script>
+</body>
+</html>
